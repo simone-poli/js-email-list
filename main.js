@@ -5,7 +5,10 @@ for (let i = 0; i < 10; i++){
     .then(response => response.json())
     .then(data =>{
         console.log(data)
-})
-.catch(error => {
-    console.log(error)
-})}
+        const output = document.createElement("p")
+        output.innerText= data.response
+        document.body.appendChild(output)
+    })
+    .catch(error => {
+        console.log(error)
+    })}
